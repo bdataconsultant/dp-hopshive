@@ -49,7 +49,17 @@
           <groupId>io.hops.hive</groupId>
             <artifactId>hive-exec</artifactId>
         </exclusion>
+        <exclusion>
+          <artifactId>javax.el</artifactId>
+          <groupId>org.glassfish</groupId>
+        </exclusion>
       </exclusions>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.glassfish/javax.el -->
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.el</artifactId>
+      <version>3.0.1-b06</version>
     </dependency>
     <dependency>
       <groupId>io.hops.hive</groupId>

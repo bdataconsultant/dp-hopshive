@@ -87,6 +87,10 @@
       <artifactId>hbase-mapreduce</artifactId>
       <version>${hbase.version}</version>
       <exclusions>
+            <exclusion>
+                <artifactId>javax.el</artifactId>
+                <groupId>org.glassfish</groupId>
+            </exclusion>
         <exclusion>
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-common</artifactId>
@@ -129,6 +133,10 @@
       <artifactId>hbase-server</artifactId>
       <version>${hbase.version}</version>
       <exclusions>
+            <exclusion>
+                <artifactId>javax.el</artifactId>
+                <groupId>org.glassfish</groupId>
+            </exclusion>
         <exclusion>
           <groupId>org.apache.hbase</groupId>
           <artifactId>hbase-procedure</artifactId>
@@ -234,6 +242,10 @@
       <type>test-jar</type>
       <scope>test</scope>
       <exclusions>
+            <exclusion>
+                <artifactId>javax.el</artifactId>
+                <groupId>org.glassfish</groupId>
+            </exclusion>
          <exclusion>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>

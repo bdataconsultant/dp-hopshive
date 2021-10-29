@@ -331,6 +331,16 @@
       <artifactId>apacheds-server-integ</artifactId>
       <version>${apache-directory-server.version}</version>
       <scope>test</scope>
+        <exclusions>
+        <exclusion>
+            <artifactId>javax.el</artifactId>
+            <groupId>org.glassfish</groupId>
+        </exclusion>
+            <exclusion>
+                <artifactId>ldap-client-api</artifactId>
+                <groupId>org.apache.directory.client.ldap</groupId>
+            </exclusion>
+        </exclusions>
     </dependency>
 
     <dependency>

@@ -559,6 +559,10 @@
       <version>${hbase.version}</version>
       <exclusions>
         <exclusion>
+          <artifactId>javax.el</artifactId>
+          <groupId>org.glassfish</groupId>
+        </exclusion>
+        <exclusion>
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-hdfs</artifactId>
         </exclusion>
@@ -620,6 +624,10 @@
         <exclusion>
           <groupId>commmons-logging</groupId>
           <artifactId>commons-logging</artifactId>
+        </exclusion>
+        <exclusion>
+          <artifactId>javax.el</artifactId>
+          <groupId>org.glassfish</groupId>
         </exclusion>
       </exclusions>
     </dependency>

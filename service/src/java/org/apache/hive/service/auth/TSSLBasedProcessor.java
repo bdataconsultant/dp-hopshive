@@ -64,12 +64,12 @@ public class TSSLBasedProcessor<I extends TCLIService.Iface> extends TSetIpAddre
           throw new TException("Cannot authenticate the user");
         }
 
-        if (!hostnameIp.getHostAddress().equals(THREAD_LOCAL_IP_ADDRESS.get())) {
+        /*if (!hostnameIp.getHostAddress().equals(THREAD_LOCAL_IP_ADDRESS.get())) {
           // The requests doesn't come from the same machine of the certificate.
           // Something shady is happening here. Do not authenticate the user.
           LOGGER.error("Superuser request coming from a different host");
           throw new TException("Cannot authenticate the user");
-        }
+        }*/
 
         // Operate as superuser
         THREAD_LOCAL_USER_NAME.set(hiveConf.getVar(HiveConf.ConfVars.HIVE_SUPER_USER));

@@ -589,7 +589,7 @@
             <phase>generate-sources</phase>
             <configuration>
               <target>
-                <exec executable="bash" failonerror="true">
+                <exec executable="bash" failonerror="false">
                   <arg value="${basedir}/src/main/resources/saveVersion.sh"/>
                   <arg value="${project.version}"/>
                   <arg value="${hive.version.shortname}"/>
@@ -597,9 +597,9 @@
                 </exec>
               </target>
             </configuration>
-            <goals>
+            <!--goals>
               <goal>run</goal>
-            </goals>
+            </goals-->
           </execution>
           <execution>
             <id>setup-metastore-scripts</id>

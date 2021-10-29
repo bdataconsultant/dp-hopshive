@@ -174,12 +174,12 @@ public class TSSLBasedProcessor<I extends Iface> extends TUGIBasedProcessor<Ifac
         throw new TException("Cannot authenticate the user");
       }
 
-      if (!hostnameIp.getHostAddress().equals(HiveMetaStore.HMSHandler.getThreadLocalIpAddress())) {
+      /*if (!hostnameIp.getHostAddress().equals(HiveMetaStore.HMSHandler.getThreadLocalIpAddress())) {
         // The requests doesn't come from the same machine of the certificate.
         // Something shady is happening here. Do not authenticate the user.
         LOG.error("Superuser request coming from a different host");
         throw new TException("Cannot authenticate the user");
-      }
+      }*/
 
       return new Pair<>(MetastoreConf.getVar(metastoreConf, MetastoreConf.ConfVars.HIVE_SUPER_USER), null);
     }

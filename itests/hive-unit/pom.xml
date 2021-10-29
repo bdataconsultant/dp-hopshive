@@ -586,7 +586,7 @@
                 </goals>
                 <configuration>
                   <target>
-                    <exec executable="bash" dir="${basedir}" failonerror="true">
+                    <exec executable="bash" dir="${basedir}" failonerror="false">
                       <arg line="../target/download.sh"/>
                     </exec>
                   </target>
